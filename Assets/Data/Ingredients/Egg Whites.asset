@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Egg Whites
   m_EditorClassIdentifier: 
   IngredientName: Egg Whites
-  prefab: {fileID: 0}
+  prefab: {fileID: 1981334293490972, guid: a0e68d256680851429252f49c30c8185, type: 2}
   unitType: 7

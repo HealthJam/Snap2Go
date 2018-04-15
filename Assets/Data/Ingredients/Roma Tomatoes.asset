@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Roma Tomatoes
   m_EditorClassIdentifier: 
   IngredientName: Roma Tomatoes
-  prefab: {fileID: 0}
+  prefab: {fileID: 1784412631838808, guid: 761f76d500e2620439326e72476b64b0, type: 2}
   unitType: 10

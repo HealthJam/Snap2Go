@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Bread Crumbs
   m_EditorClassIdentifier: 
   IngredientName: Bread Crumbs
-  prefab: {fileID: 0}
+  prefab: {fileID: 1633210427035458, guid: 7101c46ef356f014ca0d0a059b03e06e, type: 2}
   unitType: 7

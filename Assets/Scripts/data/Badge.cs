@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 [Serializable]
-public class Badge {
+public class Badge : Collectable {
 
-    public int id;
-    public string name;
-    public string description;
-    public int experience;
-    public string texturePath;  //loaded from Resources dir
+    private int id;
+    private string name;
+    private string description;
+    private int experience;
+    private string texturePath;  //loaded from Resources dir
 
     public Badge(int id, string name, string description, int experience, string texturePath)
     {
@@ -18,6 +18,31 @@ public class Badge {
         this.description = description;
         this.experience = experience;
         this.texturePath = texturePath;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public string getName()
+    {
+        return name;
+    }
+
+    public string getDescription()
+    {
+        return description;
+    }
+
+    public int getExperience()
+    {
+        return experience;
+    }
+
+    public string getTexturePath()
+    {
+        return texturePath;
     }
 }
 

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Zucchini
   m_EditorClassIdentifier: 
   IngredientName: Zucchini
-  prefab: {fileID: 0}
+  prefab: {fileID: 1829181422423070, guid: 33807c84e0f093649a91fae74175ff23, type: 2}
   unitType: 3
