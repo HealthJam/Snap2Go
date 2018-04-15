@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 [Serializable]
 public struct usedIngredients
@@ -15,11 +16,13 @@ public class Recipe : ScriptableObject
 {
     public string recipeName;
 
+    public Sprite recipeImage;
+
     public List<usedIngredients> ingredientList = new List<usedIngredients>();
 
     public Dictionary<Ingredient, float> ingredients = new Dictionary<Ingredient, float>();
 
-    private void Awake()
+    public void Init()
     {
         foreach (usedIngredients ing in ingredientList)
         {

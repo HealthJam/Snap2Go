@@ -6,8 +6,7 @@ using UnityEngine;
 [Serializable]
 public class Player {
 
-    public string name;
-    public int age;
-    public int height;  //inches
-    public int weight; //lbs
+    public static string name;
+    public static int age;
+    public static int weight; //lbs
 }

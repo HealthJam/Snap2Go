@@ -12,6 +12,8 @@ public class BadgeManager : MonoBehaviour
 
     public List<BadgeUnlockRecord> unlockBadgeRecords = new List<BadgeUnlockRecord>();
 
+    public BadgeUI badgeUIPrefab;
+
     private void Awake()
     {
         loadBadgeInfo();
@@ -41,8 +43,8 @@ public class BadgeManager : MonoBehaviour
     private void loadUnlockedBadges()
     {
         string unlockedBadgesJson = PlayerPrefs.GetString(UNLOCK_RECORDS);
-        BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
-        unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
+        //BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
+        //unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
     }
 
     private void saveUnlockedBadges()
@@ -124,5 +126,17 @@ public class BadgeManager : MonoBehaviour
 		#if UNITY_EDITOR
         UnityEditor.AssetDatabase.Refresh();
 		#endif
+    }
+
+    public List<Badge> GetTestBadges()
+    {
+        List<Badge> testList = new List<Badge>();
+        Badge a = new Badge(0, "badge one", "descrip", 1, "UI/Test");
+        Badge b = new Badge(1, "badge two", "des", 2, "UI/Test");
+
+        testList.Add(a);
+        testList.Add(b);
+
+        return testList;
     }
 }
