@@ -13,6 +13,10 @@ public class SpawnIngredient : MonoBehaviour
     [SerializeField]
     AbstractMap _map;
 
+    public float EXPLORE_SPAWN_RATE_SECONDS = 10;
+    public float EXPEDITION_SPAWN_RATE_SECONDS = 5;
+    public float SPAWN_SCALE = 10f;
+
     ILocationProvider _locationProvider;
     ILocationProvider LocationProvider
     {
@@ -27,47 +31,46 @@ public class SpawnIngredient : MonoBehaviour
         }
     }
 
-
-
     public void SpawnRandom()
     {
         var map = LocationProviderFactory.Instance.mapManager;
-        float _spawnScale = 10f;
         Vector2d newLoc = LocationProvider.CurrentLocation.LatitudeLongitude + new Vector2d(Random.Range(-.002f, .002f), Random.Range(-.0022f, .0022f));
 
         int index = Random.Range(0, AllIngredients.Count);
         GameObject prefab = AllIngredients[index].prefab;
         var instance = Instantiate(prefab);
         instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
-        instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+        instance.transform.localScale = new Vector3(SPAWN_SCALE, SPAWN_SCALE, SPAWN_SCALE);
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
-        yield return new WaitForSeconds(1);
-        SpawnRandom();       
+        StartCoroutine(ExpeditionSpawnRoutine());
+        StartCoroutine(ExploreSpawnRoutine());
     }
 
-    public void SpawnRandomAtLocation(double lat, double lon) {
-
-        var map = LocationProviderFactory.Instance.mapManager;
-        //transform.localPosition = map.GeoToWorldPosition(LocationProvider.CurrentLocation.LatitudeLongitude);
-        Vector2d newLoc = LocationProvider.CurrentLocation.LatitudeLongitude + new Vector2d(Random.Range(-.0002f, .0002f), Random.Range(-.0002f, .0002f));
-
-        int index = Random.Range(0, AllIngredients.Count);
-        GameObject prefab = AllIngredients[index].prefab;
-        var instance = Instantiate(prefab);
-        instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
-        //instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
-        //_spawnedObjects.Add(instance);
-    }
-
-    public void SpawnIngredientAtLocation(Ingredient ing, double lat, double lon)
+    IEnumerator ExpeditionSpawnRoutine()
     {
-        GameObject obj = Instantiate(ing.prefab);
+        while (true)
+        {
+            while (GameplayLoop.Instance.state.Equals(GameplayLoop.GameState.EXPEDITION_IN_PROGRESS))
+            {
+                SpawnRandom();
+                yield return new WaitForSeconds(EXPEDITION_SPAWN_RATE_SECONDS);
+            }
+            yield return 0;
+        }
+    }
 
-        //set obj at lat lon utility
-
-
+    IEnumerator ExploreSpawnRoutine()
+    {
+        while(true) { 
+            while(GameplayLoop.Instance.state.Equals(GameplayLoop.GameState.EXPLORE))
+            {
+                SpawnRandom();
+                yield return new WaitForSeconds(EXPLORE_SPAWN_RATE_SECONDS);
+            }
+            yield return 0;
+        }
     }
 }
