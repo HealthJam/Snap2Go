@@ -1,24 +1,14 @@
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-[Serializable]
-public class Badge : Collectable {
+public class IngredientModel : Collectable {
 
-    private int id;
+    private  int id;
     private string name;
     private string description;
     private int experience;
-    private string texturePath;  //loaded from Resources dir
-
-    public Badge(int id, string name, string description, int experience, string texturePath)
-    {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.experience = experience;
-        this.texturePath = texturePath;
-    }
+    private string texturePath;
 
     public int getId()
     {
@@ -45,4 +35,3 @@ public class Badge : Collectable {
         return texturePath;
     }
 }
-
