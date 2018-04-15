@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Onion
   m_EditorClassIdentifier: 
   IngredientName: Onion
-  prefab: {fileID: 0}
+  prefab: {fileID: 1034913161844512, guid: a7419929a3815ad40a3cbede5b581f7d, type: 2}
   unitType: 10

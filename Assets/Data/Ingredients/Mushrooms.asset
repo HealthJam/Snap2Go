@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Mushrooms
   m_EditorClassIdentifier: 
   IngredientName: Mushrooms
-  prefab: {fileID: 0}
+  prefab: {fileID: 1887938460819088, guid: 0151ad368a463f546b9701fd7aefcb44, type: 2}
   unitType: 2

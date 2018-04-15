@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Salt
   m_EditorClassIdentifier: 
   IngredientName: Salt
-  prefab: {fileID: 0}
+  prefab: {fileID: 1852108368033894, guid: d475b0a8d95e1db44a63d5dfa946a166, type: 2}
   unitType: 9

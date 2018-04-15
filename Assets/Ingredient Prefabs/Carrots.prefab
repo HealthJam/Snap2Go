@@ -87,9 +87,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4381311938192366}
+  - component: {fileID: 64451193596865514}
   m_Layer: 0
   m_Name: Carrots
-  m_TagString: Untagged
+  m_TagString: ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,3 +328,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493494639667092}
   m_Mesh: {fileID: 4300004, guid: 8cb475e7c7a9ad345a49e95885258d50, type: 3}
+--- !u!64 &64451193596865514
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1829181422423070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}

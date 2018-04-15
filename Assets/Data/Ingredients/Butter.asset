@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a2cd8ee1a9c77643b41833ab495c0c9, type: 3}
-  m_Name: Black Pepper
+  m_Name: Butter
   m_EditorClassIdentifier: 
-  IngredientName: Black Pepper
+  IngredientName: Butter
   prefab: {fileID: 1852108368033894, guid: d475b0a8d95e1db44a63d5dfa946a166, type: 2}
-  unitType: 0
+  unitType: 8
