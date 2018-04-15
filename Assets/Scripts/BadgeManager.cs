@@ -122,6 +122,8 @@ public class BadgeManager : MonoBehaviour
                 writer.Write(json);
             }
         }
+		#if UNITY_EDITOR
         UnityEditor.AssetDatabase.Refresh();
+		#endif
     }
 }

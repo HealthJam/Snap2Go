@@ -444,7 +444,7 @@ namespace Mapbox.Unity.Map
 			{
 				_options = new MapOptions();
 			}
-			_options.locationOptions.latitudeLongitude = String.Format("{0},{1}", latLon.x, latLon.y);
+			_options.locationOptions.latitudeLongitude = String.Format("{0},{1}", 28.003078, -80.655452);
 			_options.locationOptions.zoom = zoom;
 
 			SetUpMap();

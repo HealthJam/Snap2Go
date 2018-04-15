@@ -8,7 +8,7 @@
 	{
 		[Geocode]
 		[Tooltip("The coordinates to build a map around")]
-		public string latitudeLongitude = "0,0";
+		public string latitudeLongitude = "28.003078,-80.655452";
 		[Range(0, 22)]
 		[Tooltip("The zoom level of the map")]
 		public float zoom = 4.0f;
