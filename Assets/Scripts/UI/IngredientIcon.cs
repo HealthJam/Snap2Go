@@ -11,7 +11,7 @@ public class IngredientIcon : MonoBehaviour {
 
     public void Initialize(Ingredient data)
     {
-        ingredientImage.sprite = data.ingredientImage;
+        //ingredientImage.sprite = data.ingredientImage;
 
         ingredientName.text = data.name;
     }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Badge : Collectable {
 
     private int id;
-    private string name;
+    private string n;
     private string description;
     private int experience;
     private string texturePath;  //loaded from Resources dir
@@ -14,7 +14,7 @@ public class Badge : Collectable {
     public Badge(int id, string name, string description, int experience, string texturePath)
     {
         this.id = id;
-        this.name = name;
+        this.n = name;
         this.description = description;
         this.experience = experience;
         this.texturePath = texturePath;
@@ -27,7 +27,7 @@ public class Badge : Collectable {
 
     public string getName()
     {
-        return name;
+        return n;
     }
 
     public string getDescription()

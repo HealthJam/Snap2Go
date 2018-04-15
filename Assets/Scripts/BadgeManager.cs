@@ -43,8 +43,8 @@ public class BadgeManager : MonoBehaviour
     private void loadUnlockedBadges()
     {
         string unlockedBadgesJson = PlayerPrefs.GetString(UNLOCK_RECORDS);
-        BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
-        unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
+        //BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
+        //unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
     }
 
     private void saveUnlockedBadges()
@@ -131,8 +131,8 @@ public class BadgeManager : MonoBehaviour
     public List<Badge> GetTestBadges()
     {
         List<Badge> testList = new List<Badge>();
-        Badge a = new Badge(0, "badge one", "descrip", 1, "UI/Test");
-        Badge b = new Badge(1, "badge two", "des", 2, "UI/Test");
+        Badge a = new Badge(0, "Embark on an Adventure", "Start an expedition", 1, "UI/Snap 2 Go-17");
+        Badge b = new Badge(1, "Food for Thought", "Collect any 10 ingredients", 2, "UI/Snap 2 Go-17");
 
         testList.Add(a);
         testList.Add(b);
