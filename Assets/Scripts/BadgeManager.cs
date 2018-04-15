@@ -34,15 +34,17 @@ public class BadgeManager : MonoBehaviour
         Badge[] badgeList = JsonHelper.getJsonArray<Badge>(json);
         foreach(Badge badge in badgeList)
         {
-            globalBadges[badge.id] = badge;
+            globalBadges[badge.getId()] = badge;
         }
     }
 
     private void loadUnlockedBadges()
     {
         string unlockedBadgesJson = PlayerPrefs.GetString(UNLOCK_RECORDS);
-        BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
-        unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
+        if(unlockedBadgesJson.Length > 0) { 
+            BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
+            unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
+        }
     }
 
     private void saveUnlockedBadges()
@@ -111,7 +113,6 @@ public class BadgeManager : MonoBehaviour
             badge10,
         };
         string json = JsonHelper.arrayToJson<Badge>(badgeList.ToArray());
-        Debug.Log(json);
 
         string path = "Assets/Resources/BadgeList.json";
         using (FileStream fs = new FileStream(path, FileMode.Create))
