@@ -4,12 +4,16 @@ using UnityEngine;
 
 using UnityEngine.Events;
 
+public delegate void IngredientClick(GameObject obj, Ingredient i);
+
 public class ClickedIngredient : MonoBehaviour {
 
-    public UnityEvent Clicked = new UnityEvent();
+    public IngredientClick clickCallback;
+
+    public Ingredient data;
 
     public void IsClicked()
     {
-        Clicked.Invoke();
+        clickCallback.Invoke(gameObject, data);
     }
 }

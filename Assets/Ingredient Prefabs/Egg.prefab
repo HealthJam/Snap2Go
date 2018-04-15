@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33207924766628406}
   - component: {fileID: 23548888401033136}
   - component: {fileID: 64982914661043032}
+  - component: {fileID: 65037058147032124}
   m_Layer: 0
   m_Name: Egg
   m_TagString: ingredient
@@ -97,3 +98,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 214315961896cb246a09ddccf67044d7, type: 3}
+--- !u!65 &65037058147032124
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981334293490972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6762706, y: 0.8842002, z: 0.67627066}
+  m_Center: {x: -0.00000010430813, y: -0.000000074505806, z: 0}

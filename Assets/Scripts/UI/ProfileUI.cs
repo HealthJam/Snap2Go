@@ -98,6 +98,14 @@ public class ProfileUI : MonoBehaviour {
 
     public void Show()
     {
-        gameObject.SetActive(true);
+        ProfileMenu.SetActive(true);
+    }
+
+    public void CollectIngredient(Ingredient data)
+    {
+        if (!IngredientsCollected.Contains(data))
+        {
+            IngredientsCollected.Add(data);
+        }
     }
 }

@@ -13,6 +13,9 @@ public class SpawnIngredient : MonoBehaviour
     [SerializeField]
     AbstractMap _map;
 
+    [SerializeField]
+    private ProfileUI profile;
+
     ILocationProvider _locationProvider;
     ILocationProvider LocationProvider
     {
@@ -41,7 +44,8 @@ public class SpawnIngredient : MonoBehaviour
         StartCoroutine(AnimateIn(instance, new Vector3(_spawnScale, _spawnScale, _spawnScale)));
         instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
         ClickedIngredient clickIng = instance.AddComponent<ClickedIngredient>();
-        clickIng.Clicked.AddListener(IngredientClicked);
+        clickIng.data = AllIngredients[index];
+        clickIng.clickCallback += IngredientClicked;
         //instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
     }
 
@@ -63,6 +67,26 @@ public class SpawnIngredient : MonoBehaviour
 
         instance.transform.localScale = finalScale;
         instance.transform.localEulerAngles = defaulteuler;
+    }
+
+    private IEnumerator AnimateOut(GameObject instance)
+    {
+        float startTime = Time.time;
+        instance.transform.localScale = Vector3.zero;
+        Vector3 defaulteuler = instance.transform.localEulerAngles;
+        Vector3 final = new Vector3(defaulteuler.x, 360, defaulteuler.z);
+        Vector3 startScale = instance.transform.localScale;
+        float deltaTotal = 0;
+
+        while (deltaTotal < 2)
+        {
+            instance.transform.localScale = Vector3.Lerp(startScale, Vector3.zero, deltaTotal);
+            instance.transform.localEulerAngles = Vector3.Slerp(defaulteuler, final, deltaTotal);
+            deltaTotal += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(instance);
     }
 
     private IEnumerator Start()
@@ -94,8 +118,15 @@ public class SpawnIngredient : MonoBehaviour
 
     }
 
-    private void IngredientClicked()
+    private void IngredientClicked(GameObject obj, Ingredient data)
     {
-        Debug.Log("Spawner knows ingredient cliced");
+        if (profile == null)
+        {
+            profile = GameObject.FindGameObjectWithTag("ProfileUI").GetComponent<ProfileUI>();
+        }
+
+        profile.CollectIngredient(data);
+
+        StartCoroutine(AnimateOut(obj));
     }
 }

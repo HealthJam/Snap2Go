@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33098193547695476}
   - component: {fileID: 23410869372860862}
   - component: {fileID: 64437692241988794}
+  - component: {fileID: 65384060192909052}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: ingredient
@@ -97,3 +98,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: b53fab1a8a71cf745ad1af6d16214489, type: 3}
+--- !u!65 &65384060192909052
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1887938460819088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9731593, y: 0.9814534, z: 0.97329164}
+  m_Center: {x: 0.00025716424, y: 0.00000023841858, z: 0.00027415156}

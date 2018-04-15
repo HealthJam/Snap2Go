@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33257404944757822}
   - component: {fileID: 23761418703107944}
   - component: {fileID: 64951851857132468}
+  - component: {fileID: 65059125126170818}
   m_Layer: 0
   m_Name: Pea
   m_TagString: ingredient
@@ -97,3 +98,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: ee17f19b050fb2f4f8322e87ecfced8e, type: 3}
+--- !u!65 &65059125126170818
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863266375690822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1837037, y: 0.38079298, z: 0.4017986}
+  m_Center: {x: 0.000000059604645, y: -0.000000052154064, z: 0.000000014901161}
