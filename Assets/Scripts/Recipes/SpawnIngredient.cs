@@ -92,7 +92,11 @@ public class SpawnIngredient : MonoBehaviour
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(1);
-        SpawnRandom();       
+        while (true)
+        {
+            SpawnRandom();
+            yield return new WaitForSeconds(10);
+        }
     }
 
     public void SpawnRandomAtLocation(double lat, double lon) {

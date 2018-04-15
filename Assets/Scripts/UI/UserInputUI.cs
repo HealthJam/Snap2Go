@@ -12,9 +12,12 @@ public class UserInputUI : MonoBehaviour {
     public InputField weight;
     public Button startButton;
 
+    public Text userNameText;
+
     private void Awake()
     {
         startButton.interactable = false;
+        startButton.onClick.AddListener(SetUserName);
         userName.onEndEdit.AddListener((s) => userNameSet(s));
         age.onEndEdit.AddListener((s) => ageSet(s));
         weight.onEndEdit.AddListener((s) => weightSet(s));
@@ -38,6 +41,11 @@ public class UserInputUI : MonoBehaviour {
         int we = int.Parse(w);
         Player.weight = we;
         EnableCompleteButton();
+    }
+
+    public void SetUserName()
+    {
+        userNameText.text = Player.name;
     }
 
     private void EnableCompleteButton()

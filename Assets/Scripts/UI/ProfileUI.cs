@@ -93,7 +93,7 @@ public class ProfileUI : MonoBehaviour {
         ProfileMenu.gameObject.SetActive(false);
         ListViewMenu.Show();
         ListViewMenu.listName.text = listName;
-        ListViewMenu.icon = Resources.Load<Image>("UI/" + listName);
+        ListViewMenu.icon.sprite = Resources.Load<Sprite>("UI/" + listName);
     }
 
     public void Show()
