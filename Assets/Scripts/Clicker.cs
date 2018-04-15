@@ -8,6 +8,8 @@ public class Clicker : MonoBehaviour {
     Ray ray;
     RaycastHit hit;
 
+    public SnapPopup popup;
+
     void selectedAsteroidIndicator(Transform TF)
     {
         GameObject GO = GameObject.FindGameObjectWithTag("selectionParticle");
@@ -29,6 +31,12 @@ public class Clicker : MonoBehaviour {
                     case "ingredient":
                         {
                             hit.transform.GetComponent<ClickedIngredient>().IsClicked();
+                            break;
+                        }
+                    case "store":
+                        {
+                            ClickedStore store = hit.transform.GetComponent<ClickedStore>();
+                            popup.DisplayStore(store.storeName, store.storeLocation);
                             break;
                         }
                 }
