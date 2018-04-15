@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d72753165d0ca34aa14ae7a655f70c3, type: 3}
+  m_Name: Green Beans with Lemon & Garlic
+  m_EditorClassIdentifier: 
+  recipeName: Green Beans with Lemon & Garlic
+  ingredientList:
+  - ingredient: {fileID: 11400000, guid: 4f809b767ac972a459e14eeccacf0da1, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: f179ad8af264f07438de310bd42e6e1e, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 5e5d4d914375dbf45a3ce00cc3f76655, type: 2}
+    amount: 3
+  - ingredient: {fileID: 11400000, guid: f58a9de67721535449141832dd0ed63a, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: 23e402f29538d0140a53a05e50ce667b, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 08fe180af794e214eb997a9356a9718b, type: 2}
+    amount: 1

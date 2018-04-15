@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d72753165d0ca34aa14ae7a655f70c3, type: 3}
+  m_Name: Fettuccine Alfredo
+  m_EditorClassIdentifier: 
+  recipeName: Fettuccine Alfredo
+  ingredientList:
+  - ingredient: {fileID: 11400000, guid: 5e5d4d914375dbf45a3ce00cc3f76655, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: f58a9de67721535449141832dd0ed63a, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 6cf81207e044f824c8cfb4b0c989dc4b, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 92c357dfd4b43ca4c9044490b40e2e68, type: 2}
+    amount: 0
+  - ingredient: {fileID: 11400000, guid: 313976a7ec157e4478913fc25c1e2a3b, type: 2}
+    amount: 0.5
+  - ingredient: {fileID: 11400000, guid: c7e905023355f2c4a8dd2f13f7600fd3, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: 636c1f8564233e34f9a56183ffedd4ec, type: 2}
+    amount: 0.75
+  - ingredient: {fileID: 11400000, guid: a675b4bddcc38074f996e8f96c752388, type: 2}
+    amount: 3
+  - ingredient: {fileID: 11400000, guid: 74df33262cb766141ad0e95ccc55d8ab, type: 2}
+    amount: 12
+  - ingredient: {fileID: 11400000, guid: 08fe180af794e214eb997a9356a9718b, type: 2}
+    amount: 1
