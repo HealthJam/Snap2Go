@@ -9,7 +9,7 @@ public class LocationProvider : MonoBehaviour {
     public List<SnapLocation> snapLocationList = new List<SnapLocation>();
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         TextAsset targetFile = Resources.Load<TextAsset>("snap_locations");
         string snapLocationJson = targetFile.text;

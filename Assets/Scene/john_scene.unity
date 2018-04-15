@@ -897,6 +897,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &253551397 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1244301553915122, guid: 35ce2bb4caba9434db5e656796b632b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1932740639}
 --- !u!1 &262251928
 GameObject:
   m_ObjectHideFlags: 0
@@ -9901,7 +9906,7 @@ Prefab:
     - target: {fileID: 114811411054172484, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 2}
       propertyPath: _zoomSpeed
-      value: 40
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4957478971387690, guid: 35ce2bb4caba9434db5e656796b632b1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9926,6 +9931,22 @@ Prefab:
     - target: {fileID: 4335768556937342, guid: 35ce2bb4caba9434db5e656796b632b1, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114217892139225900, guid: 35ce2bb4caba9434db5e656796b632b1,
+        type: 2}
+      propertyPath: snapLocations
+      value: 
+      objectReference: {fileID: 253551397}
+    - target: {fileID: 114217892139225900, guid: 35ce2bb4caba9434db5e656796b632b1,
+        type: 2}
+      propertyPath: storePrefab
+      value: 
+      objectReference: {fileID: 1167621722670060, guid: 3ff543bfc693bab47a7ebd693fbaefc7,
+        type: 2}
+    - target: {fileID: 114586318175614768, guid: 35ce2bb4caba9434db5e656796b632b1,
+        type: 2}
+      propertyPath: _latitudeLongitude
+      value: 28.3652882, -81.2904209
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35ce2bb4caba9434db5e656796b632b1, type: 2}
