@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Name: Black Pepper
   m_EditorClassIdentifier: 
   IngredientName: Black Pepper
+  ingredientImage: {fileID: 21300000, guid: 818198d6da1f6d84db65f5dad172eeb4, type: 3}
   prefab: {fileID: 1852108368033894, guid: d475b0a8d95e1db44a63d5dfa946a166, type: 2}
   unitType: 0

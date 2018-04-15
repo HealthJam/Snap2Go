@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Zucchini Parmesan Crisps
   m_EditorClassIdentifier: 
   recipeName: Zucchini Parmesan Crisps
+  recipeImage: {fileID: 21300000, guid: 7a36158a2c2724c4d8fb9be96005e55d, type: 3}
   ingredientList:
   - ingredient: {fileID: 11400000, guid: 73f5860466fcb7146b28eebd1abff2b9, type: 2}
     amount: 0
@@ -21,7 +22,7 @@ MonoBehaviour:
     amount: 0
   - ingredient: {fileID: 11400000, guid: 313976a7ec157e4478913fc25c1e2a3b, type: 2}
     amount: 0.2
-  - ingredient: {fileID: 11400000, guid: 08fe180af794e214eb997a9356a9718b, type: 2}
+  - ingredient: {fileID: 11400000, guid: 5e5d4d914375dbf45a3ce00cc3f76655, type: 2}
     amount: 1
   - ingredient: {fileID: 11400000, guid: c9e82d89a94f01c47a233f84263df825, type: 2}
     amount: 0.25

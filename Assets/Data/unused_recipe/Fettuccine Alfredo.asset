@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Fettuccine Alfredo
   m_EditorClassIdentifier: 
   recipeName: Fettuccine Alfredo
+  recipeImage: {fileID: 21300000, guid: 27a366aade3a7904f86b4538ba21bdd2, type: 3}
   ingredientList:
   - ingredient: {fileID: 11400000, guid: 5e5d4d914375dbf45a3ce00cc3f76655, type: 2}
     amount: 1
