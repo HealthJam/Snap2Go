@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 81857229158601762}
   - component: {fileID: 114811411054172484}
   - component: {fileID: 114010631673500314}
+  - component: {fileID: 114274644483135074}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -123,6 +124,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4601654966360252}
+  - component: {fileID: 114473238413093576}
+  - component: {fileID: 114791373600859040}
   m_Layer: 0
   m_Name: LocationBasedGame
   m_TagString: Untagged
@@ -373,7 +376,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523592997964212}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 225, z: -10.7}
+  m_LocalPosition: {x: 0, y: 225, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4121022463246968}
@@ -586,6 +589,17 @@ MonoBehaviour:
   _rotationFollowFactor: 2
   _rotateZ: 0
   _useTransformLocationProvider: 0
+--- !u!114 &114274644483135074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523592997964212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 275c85bc00e3a3f458014818940ffeee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114276132085450664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -597,10 +611,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initializeOnStart: 0
+  _initializeOnStart: 1
   _options:
     locationOptions:
-      latitudeLongitude: 39.56667, 2.64972
+      latitudeLongitude: 
       zoom: 16
     extentOptions:
       extentType: 0
@@ -687,7 +701,7 @@ MonoBehaviour:
       vectorSubLayers:
       - coreOptions:
           isActive: 1
-          sublayerName: Untitled
+          sublayerName: Buildings
           geometryType: 2
           layerName: building
           snapToTerrain: 1
@@ -707,9 +721,41 @@ MonoBehaviour:
           texturingType: 3
           materials:
           - Materials:
-            - {fileID: 2100000, guid: c5af501b9ca374cf1948c4571862c6f9, type: 2}
+            - {fileID: 2100000, guid: 7c0707aad770f0f4ca09b79e3961539b, type: 2}
           - Materials:
-            - {fileID: 2100000, guid: a84d22a5fa79bce4396212d84ad11831, type: 2}
+            - {fileID: 2100000, guid: c5af501b9ca374cf1948c4571862c6f9, type: 2}
+          atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21, type: 2}
+          colorPallete: {fileID: 11400000, guid: e1b79d6caac0144adada0c548ef06705,
+            type: 2}
+        buildingsWithUniqueIds: 1
+        moveFeaturePositionTo: 0
+        MeshModifiers: []
+        GoModifiers: []
+      - coreOptions:
+          isActive: 1
+          sublayerName: road
+          geometryType: 1
+          layerName: road
+          snapToTerrain: 1
+          groupFeatures: 0
+          lineWidth: 5
+        filterOptions:
+          filters: []
+          combinerType: 0
+        extrusionOptions:
+          extrusionType: 5
+          extrusionGeometryType: 0
+          propertyName: height
+          minimumHeight: 0
+          maximumHeight: 3
+        materialOptions:
+          projectMapImagery: 0
+          texturingType: 3
+          materials:
+          - Materials:
+            - {fileID: 2100000, guid: 204bcfc5761ef1b46b9301bc80304e2b, type: 2}
+          - Materials:
+            - {fileID: 2100000, guid: 204bcfc5761ef1b46b9301bc80304e2b, type: 2}
           atlasInfo: {fileID: 11400000, guid: 414754d7155df47beb52ca117a774f21, type: 2}
           colorPallete: {fileID: 11400000, guid: e1b79d6caac0144adada0c548ef06705,
             type: 2}
@@ -745,6 +791,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7760043eea2cd452ba7117f2c97e0038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114473238413093576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617592976793816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dc2aa69c1fd8cd429fb9cb03631f452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationProvider: {fileID: 0}
 --- !u!114 &114497154541160862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -811,6 +869,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _desiredAccuracyInMeters: 5
   _updateDistanceInMeters: 5
+--- !u!114 &114791373600859040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617592976793816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf32ea2cc0514b569329f6b6b68f9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _map: {fileID: 114276132085450664}
+  _locationStrings: []
+  _spawnScale: 100
+  _markerPrefab: {fileID: 1392475636476776, guid: 7ca0a404817e7f044926f1232f9bbc55,
+    type: 2}
 --- !u!114 &114811411054172484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -822,8 +896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9527fd56bc6a0c549a1e550219f9b16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panSpeed: 5
-  _zoomSpeed: 0
+  _panSpeed: 6
+  _zoomSpeed: 5
   _referenceCamera: {fileID: 20741796872709114}
 --- !u!114 &114946137324152330
 MonoBehaviour:

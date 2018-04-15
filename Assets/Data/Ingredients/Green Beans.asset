@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Green Beans
   m_EditorClassIdentifier: 
   IngredientName: Green Beans
-  prefab: {fileID: 0}
+  prefab: {fileID: 1863266375690822, guid: d82e8ca6f760d7d48acb13a68fac2315, type: 2}
   unitType: 3

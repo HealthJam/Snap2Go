@@ -69,4 +69,9 @@ public class GameplayLoop : MonoBehaviour {
         //  transition back to EXPLORE state
         Debug.Log("Finishing expedition state");
     }
+
+    public void awardPlayerExperience(int experience)
+    {
+
+    }
 }

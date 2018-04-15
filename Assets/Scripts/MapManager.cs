@@ -17,7 +17,6 @@ public class MapManager : MonoBehaviour
 
 
 	private GameMode mode;
-	private SpawnOnMap map;
 
 
 	private bool isDiscoverable = true;
@@ -26,8 +25,6 @@ public class MapManager : MonoBehaviour
 	{
 		instance = this;
 		SetNewMode (GameMode.EXPLORER);
-		map = GetComponent<SpawnOnMap> ();
-
 	
 	}
 	

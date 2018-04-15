@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Banana
   m_EditorClassIdentifier: 
   IngredientName: Banana
-  prefab: {fileID: 0}
+  prefab: {fileID: 1395918695220680, guid: ad526b89aaa8f1649b056eecaa592383, type: 2}
   unitType: 3
