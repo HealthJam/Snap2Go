@@ -43,22 +43,23 @@ public class POISpawner : MonoBehaviour {
 		float _spawnScale = 10f;
 		Vector2d newLoc = LocationProvider.CurrentLocation.LatitudeLongitude + new Vector2d(Random.Range(-.002f, .002f), Random.Range(-.0022f, .0022f));
 
-	//	int index = Random.Range(0, AllIngredients.Count);
-	//	GameObject prefab = AllIngredients[index].prefab;
-	//	var instance = Instantiate(prefab);
-	//	instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
-	//	instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+	
+		GameObject prefab = _poi;
+		var instance = Instantiate(prefab);
+		instance.transform.name = "POI";
+		instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
+		instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 	}
 	private IEnumerator Start()
 	{
-		locations = snapLocations.GetComponent<LocationProvider> ();
+	//	locations = snapLocations.GetComponent<LocationProvider> ();
 
 		yield return new WaitForSeconds (1);
-
-		foreach (SnapLocation snap in locations.snapLocationList) 
-		{
-			SpawnPOIAtLocation (snap, snap.latitude, snap.longitude);
-		}
+		SpawnRandom ();
+	//	foreach (SnapLocation snap in locations.snapLocationList) 
+	//	{
+	//		SpawnPOIAtLocation (snap, snap.latitude, snap.longitude);
+	//	}
 
 		
 

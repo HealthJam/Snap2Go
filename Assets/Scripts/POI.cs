@@ -10,8 +10,8 @@ public class POI : MonoBehaviour
 	private double lon;
 	private double lat;
 	private bool isDiscovered;
-
-
+	public Texture discovered;
+	public GameObject discovereyMarker;
 
 	public enum POIState
 	{
@@ -53,7 +53,10 @@ public class POI : MonoBehaviour
 			{}
 			break;
 		case POIState.DISCOVERED:
-			{}
+			{
+				isDiscovered = true;
+				discovereyMarker.GetComponent<MeshRenderer> ().material.mainTexture = discovered;
+			}
 			break;
 		case POIState.PARENTMODE:
 			{}
@@ -65,5 +68,11 @@ public class POI : MonoBehaviour
 	public void SetLocation(double _lat, double _lon)
 	{
 		
+	}
+
+
+	public void ObjectClicked()
+	{
+		SetNewState (POIState.DISCOVERED);
 	}
 }
