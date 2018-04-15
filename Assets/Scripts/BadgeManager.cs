@@ -36,7 +36,7 @@ public class BadgeManager : MonoBehaviour
         Badge[] badgeList = JsonHelper.getJsonArray<Badge>(json);
         foreach(Badge badge in badgeList)
         {
-            globalBadges[badge.id] = badge;
+            globalBadges[badge.getId()] = badge;
         }
     }
 

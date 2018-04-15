@@ -883,9 +883,9 @@ MonoBehaviour:
   ingredientPrefab: {fileID: 114861384297280054, guid: c15c9869f6e1fa94388704af3633033b,
     type: 2}
   RecipeList:
-  - {fileID: 11400000, guid: 1cb9c5e2bc357b640a97614eb49913e1, type: 2}
+  - {fileID: 11400000, guid: 4b682150d31e3894a8b768e7c4e6c9fe, type: 2}
   IngredientsCollected:
-  - {fileID: 11400000, guid: 08fe180af794e214eb997a9356a9718b, type: 2}
+  - {fileID: 11400000, guid: c64d12cf552daf14bb13e7a1ca285445, type: 2}
   - {fileID: 11400000, guid: aa6cb60682e92fe4b9dd6a377cad4aec, type: 2}
 --- !u!1 &133762498
 GameObject:

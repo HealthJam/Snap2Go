@@ -15,12 +15,12 @@ public class BadgeUI : MonoBehaviour {
 
     public void Initialize(Badge data)
     {
-        badgeImage.sprite = Resources.Load<Sprite>(data.texturePath);
+        badgeImage.sprite = Resources.Load<Sprite>(data.getTexturePath());
 
-        badgeName.text = data.name;
+        badgeName.text = data.getName();
 
-        description.text = data.description;
+        description.text = data.getDescription();
 
-        experience.text = data.experience.ToString();
+        experience.text = data.getExperience().ToString();
     }
 }
