@@ -27,7 +27,10 @@ public class Clicker : MonoBehaviour {
                 switch (hit.transform.tag)
                 {
                     case "ingredient":
-                        break;
+                        {
+                            hit.transform.GetComponent<ClickedIngredient>().IsClicked();
+                            break;
+                        }
                 }
             }
         }

@@ -22,8 +22,14 @@ public class Recipe : ScriptableObject
 
     public Dictionary<Ingredient, float> ingredients = new Dictionary<Ingredient, float>();
 
+    private bool init = false;
+
     public void Init()
     {
+        init = true;
+
+        if (init)
+            return;
         foreach (usedIngredients ing in ingredientList)
         {
             ingredients.Add(ing.ingredient, ing.amount);

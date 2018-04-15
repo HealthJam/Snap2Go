@@ -38,8 +38,31 @@ public class SpawnIngredient : MonoBehaviour
         int index = Random.Range(0, AllIngredients.Count);
         GameObject prefab = AllIngredients[index].prefab;
         var instance = Instantiate(prefab);
+        StartCoroutine(AnimateIn(instance, new Vector3(_spawnScale, _spawnScale, _spawnScale)));
         instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
-        instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+        ClickedIngredient clickIng = instance.AddComponent<ClickedIngredient>();
+        clickIng.Clicked.AddListener(IngredientClicked);
+        //instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
+    }
+
+    private IEnumerator AnimateIn(GameObject instance, Vector3 finalScale)
+    {
+        float startTime = Time.time;
+        instance.transform.localScale = Vector3.zero;
+        Vector3 defaulteuler = instance.transform.localEulerAngles;
+        Vector3 final = new Vector3(defaulteuler.x, 360, defaulteuler.z);
+        float deltaTotal = 0;
+
+        while (deltaTotal < 2)
+        {
+            instance.transform.localScale = Vector3.Lerp(Vector3.zero, finalScale, deltaTotal);
+            instance.transform.localEulerAngles = Vector3.Slerp(defaulteuler, final, deltaTotal);
+            deltaTotal += Time.deltaTime;
+            yield return null;
+        }
+
+        instance.transform.localScale = finalScale;
+        instance.transform.localEulerAngles = defaulteuler;
     }
 
     private IEnumerator Start()
@@ -69,5 +92,10 @@ public class SpawnIngredient : MonoBehaviour
         //set obj at lat lon utility
 
 
+    }
+
+    private void IngredientClicked()
+    {
+        Debug.Log("Spawner knows ingredient cliced");
     }
 }

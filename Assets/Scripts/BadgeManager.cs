@@ -43,8 +43,8 @@ public class BadgeManager : MonoBehaviour
     private void loadUnlockedBadges()
     {
         string unlockedBadgesJson = PlayerPrefs.GetString(UNLOCK_RECORDS);
-        //BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
-        //unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
+        BadgeUnlockRecord[] badgeUnlockRecordArr = JsonHelper.getJsonArray<BadgeUnlockRecord>(unlockedBadgesJson);
+        unlockBadgeRecords = new List<BadgeUnlockRecord>(badgeUnlockRecordArr);
     }
 
     private void saveUnlockedBadges()

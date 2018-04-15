@@ -22,7 +22,7 @@ MonoBehaviour:
     amount: 0
   - ingredient: {fileID: 11400000, guid: 313976a7ec157e4478913fc25c1e2a3b, type: 2}
     amount: 0.2
-  - ingredient: {fileID: 0}
+  - ingredient: {fileID: 11400000, guid: 5e5d4d914375dbf45a3ce00cc3f76655, type: 2}
     amount: 1
   - ingredient: {fileID: 11400000, guid: c9e82d89a94f01c47a233f84263df825, type: 2}
     amount: 0.25
