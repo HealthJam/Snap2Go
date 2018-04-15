@@ -220,27 +220,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &300186789 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1617592976793816, guid: 35ce2bb4caba9434db5e656796b632b1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1204146623}
---- !u!114 &300186791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 300186789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f3324390a8e8524d897429065e65cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snapLocations: {fileID: 857179230}
-  _map: {fileID: 1589929887}
-  _poi: {fileID: 1392475636476776, guid: 7ca0a404817e7f044926f1232f9bbc55, type: 2}
-  dist: []
-  currentIndex: 0
 --- !u!1 &339491580
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,28 +570,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114217892139225900, guid: 35ce2bb4caba9434db5e656796b632b1,
+        type: 2}
+      propertyPath: snapLocations
+      value: 
+      objectReference: {fileID: 857179230}
     - target: {fileID: 114473238413093576, guid: 35ce2bb4caba9434db5e656796b632b1,
         type: 2}
       propertyPath: locationProvider
       value: 
       objectReference: {fileID: 857179230}
-    - target: {fileID: 114276132085450664, guid: 35ce2bb4caba9434db5e656796b632b1,
-        type: 2}
-      propertyPath: _options.locationOptions.latitudeLongitude
-      value: 28.049, -80.619
-      objectReference: {fileID: 0}
-    - target: {fileID: 114276132085450664, guid: 35ce2bb4caba9434db5e656796b632b1,
-        type: 2}
-      propertyPath: _initializeOnStart
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114946137324152330, guid: 35ce2bb4caba9434db5e656796b632b1,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114791373600859040, guid: 35ce2bb4caba9434db5e656796b632b1, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35ce2bb4caba9434db5e656796b632b1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1349067222
