@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ingredient
   - ProfileUI
+  - store
   layers:
   - Default
   - TransparentFX

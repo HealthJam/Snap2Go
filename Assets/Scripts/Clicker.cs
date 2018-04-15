@@ -23,7 +23,7 @@ public class Clicker : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 500))
+            if (Physics.Raycast(ray, out hit, 5000))
             {
                 Debug.Log(hit.transform.tag);
                 switch (hit.transform.tag)

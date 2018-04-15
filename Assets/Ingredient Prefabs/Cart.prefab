@@ -36,9 +36,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4571011607971892}
+  - component: {fileID: 65289531461970312}
   m_Layer: 0
   m_Name: Cart
-  m_TagString: Untagged
+  m_TagString: store
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,8 +153,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1167621722670060}
-  m_LocalRotation: {x: -0.68275553, y: -0.42795092, z: -0.17899984, w: 0.5645015}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.31560957, y: 0.31560946, z: 0.6327643, w: -0.63276434}
+  m_LocalPosition: {x: 0, y: 0.1448, z: 0.0968}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4194542160525074}
@@ -162,7 +163,7 @@ Transform:
   - {fileID: 4442972424356666}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -112.476, y: 38.64299, z: -90.540985}
+  m_LocalEulerAnglesHint: {x: -126.981995, y: 180, z: 89.99999}
 --- !u!23 &23190423078694540
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -327,3 +328,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313420768571314}
   m_Mesh: {fileID: 4300006, guid: 004817f4a9c8bb7448af1ffa628e71a3, type: 3}
+--- !u!65 &65289531461970312
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167621722670060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 30, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}

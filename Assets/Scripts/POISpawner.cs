@@ -50,8 +50,9 @@ public class POISpawner : MonoBehaviour {
 		instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 	}
 
-	private void Start()
+	private IEnumerator Start()
 	{
+        yield return new WaitForSeconds(0.5f);
         List<SnapLocation> snapLocationList = new List<SnapLocation>();
         TextAsset targetFile = Resources.Load<TextAsset>("snap_locations");
         string snapLocationJson = targetFile.text;
@@ -91,7 +92,10 @@ public class POISpawner : MonoBehaviour {
             currentIndex++;
             GameObject store = Instantiate(storePrefab);
             store.transform.localPosition = _map.GeoToWorldPosition(loc, true);
-            store.transform.localScale = new Vector3(1,1,1) * 10;
+            store.transform.localScale = new Vector3(1,1,1) ;
+            ClickedStore cstore = store.AddComponent<ClickedStore>();
+            cstore.storeName = _snap.storeName;
+            cstore.storeLocation = _snap.streetAddress;
             Debug.Log(currentIndex);
         }
 	}
