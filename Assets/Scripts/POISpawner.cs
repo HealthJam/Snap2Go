@@ -8,7 +8,7 @@ using Mapbox.Unity.Utilities;
 using Mapbox.CheapRulerCs;
 public class POISpawner : MonoBehaviour {
 
-
+    public GameObject storePrefab;
 
 
 	[SerializeField]
@@ -49,6 +49,7 @@ public class POISpawner : MonoBehaviour {
 	//	instance.transform.localPosition = _map.GeoToWorldPosition(newLoc, true);
 	//	instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 	}
+
 	private IEnumerator Start()
 	{
 		locations = snapLocations.GetComponent<LocationProvider> ();
@@ -59,36 +60,22 @@ public class POISpawner : MonoBehaviour {
 		{
 			SpawnPOIAtLocation (snap, snap.latitude, snap.longitude);
 		}
-
-		
-
 	}
 
 	public double[] dist;
 	public int currentIndex;
 	public void SpawnPOIAtLocation(SnapLocation _snap, double lat, double lon)
 	{
-		dist = new double[813];
 		var map = LocationProviderFactory.Instance.mapManager;
-		CheapRuler ruler = new CheapRuler (LocationProvider.CurrentLocation.LatitudeLongitude.x, CheapRulerUnits.Miles);
-
-
-
-		//dist[currentIndex] = Vector3.Distance(
-		//	VectorExtensions.AsUnityPosition(_map.GeoToWorldPosition(LocationProvider.CurrentLocation.LatitudeLongitude),_map.CenterMercator, 1),
-		//	VectorExtensions.AsUnityPosition( _map.GeoToWorldPosition(new Vector2d(lat,lon),true),_map.CenterMercator, 1));
-
-		double[] snaploc = {lon, lat};
-		double[] playerLoc = {LocationProvider.CurrentLocation.LatitudeLongitude.y, LocationProvider.CurrentLocation.LatitudeLongitude.x};
-
-		double thisDist = ruler.Distance (playerLoc, snaploc);
-	
-		if (thisDist > 0) {
-			Debug.Log ("Yoda" + _snap.storeName + thisDist);
-			dist [currentIndex] = thisDist;
-			currentIndex++;
-		}
-
-
+        if(_snap.city.ToLower().Equals("orlando"))
+        {
+            Debug.Log(_snap.storeName);
+            Vector2d loc = new Vector2d(lat, lon);
+            currentIndex++;
+            GameObject store = Instantiate(storePrefab);
+            store.transform.localPosition = _map.GeoToWorldPosition(loc, true);
+            store.transform.localScale = new Vector3(2,2,2);
+            Debug.Log(currentIndex);
+        }
 	}
 }
