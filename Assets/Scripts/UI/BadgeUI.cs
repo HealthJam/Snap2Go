@@ -21,6 +21,6 @@ public class BadgeUI : MonoBehaviour {
 
         description.text = data.getDescription();
 
-        experience.text = data.getExperience().ToString();
+        //experience.text = data.getExperience().ToString();
     }
 }

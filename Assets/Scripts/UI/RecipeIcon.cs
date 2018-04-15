@@ -13,15 +13,15 @@ public class RecipeIcon : MonoBehaviour {
 
     public void Initialize(Recipe data)
     {
-        recipeImage.sprite = data.recipeImage;
+        //recipeImage.sprite = data.recipeImage;
 
         recipeName.text = data.name;
 
-        description.text = "You will need:\n";
+        description.text = "You will need: ";
 
-        foreach (Ingredient ing in data.ingredients.Keys)
+        foreach (usedIngredients ing in data.ingredientList)
         {
-            description.text += ing.IngredientName + ", ";
+            description.text += ing.ingredient.IngredientName + ", ";
         }
 
         description.text = description.text.Remove(description.text.Length - 2);
